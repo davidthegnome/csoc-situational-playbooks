@@ -15,7 +15,17 @@ Applicable to all BEC scenarios, including:
 
 ---
 
-## 3. Detection Methods
+## 3. Preperation
+Applicable to all BEC scenarios, including:
+
+- **Credential compromise** through phishing or brute force attacks.
+- **Spoofed email attacks** impersonating executives or vendors.
+- **Unauthorized email forwarding** and exfiltration.
+- **Fraudulent wire transfer** or invoice scams.
+
+---
+
+## 4. Detection Methods (Detect)
 
 ### **User Reports**
 - Employees report **suspicious emails**, **login alerts**, or **unauthorized email rule changes**.
@@ -32,12 +42,16 @@ Applicable to all BEC scenarios, including:
 
 ---
 
-## 4. Investigation & Containment
+## 5. Analysis (Respond)
 
 ### **Identify Affected Accounts**
 - Check **login history** and **device information** for anomalies.
 - Review **recent email activity** for unauthorized messages or rule changes.
 - Search for **forwarding rules** to external domains.
+
+---
+
+## 5. Contain/Eradicate (Protect)
 
 ### **Containment Steps**
 - **Immediately reset** compromised account passwords and enforce **MFA**.
@@ -47,7 +61,7 @@ Applicable to all BEC scenarios, including:
 
 ---
 
-## 5. Remediation & Mitigation
+## 6. Remediation & Mitigation (Protect, Recover)
 
 ### **Technical Controls**
 - Enforce **MFA** for all email accounts.
@@ -55,19 +69,19 @@ Applicable to all BEC scenarios, including:
 - Monitor **high-risk logins** with conditional access policies.
 - Enable **endpoint detection** for credential theft attempts.
 
-### **User Awareness & Training**
+### **User Awareness & Training** (Protect, Detect)
 - Educate employees on **phishing detection** and **safe email practices**.
 - Regularly test **phishing simulations**.
 - Encourage **reporting** of suspicious emails and activities.
 
-### **Process Improvements**
+### **Process Improvements** (Identify, Protect)
 - Implement **financial verification policies** (e.g., verbal confirmation for wire transfers).
 - Regularly **audit mailbox rules** and **access permissions**.
 - Update **incident response procedures** based on lessons learned.
 
 ---
 
-## 6. Escalation & Reporting
+## 7. Escalation & Reporting (Respond, Recover)
 - Escalate **confirmed BEC incidents** to security leadership.
 - Notify **legal, compliance, and finance** teams if fraud is involved.
 - Contact **affected third parties or customers** as necessary.
@@ -75,7 +89,21 @@ Applicable to all BEC scenarios, including:
 
 ---
 
-## 7. References & Resources
-- **MITRE ATT&CK Framework** (BEC Techniques: `T1078`, `T1566`, `T1114`, etc.)
-- **NIST Cybersecurity Framework** (*Identify, Protect, Detect, Respond, Recover*)
-- **FBI IC3 Guidelines** for BEC Prevention and Response
+## 8. References & Resources
+- **MITRE ATT&CK Framework**
+  | Technique ID | Name | Relevance to BEC |
+  |-------------|---------------------------|-----------------------------------------------------|
+  | **T1078** | Valid Accounts | Use of compromised credentials to access accounts. |
+  | **T1566** | Phishing | Primary initial access vector for BEC. |
+  | **T1114** | Email Collection | Threat actors accessing/storing email data. |
+  | **T1113** | Screen Capture | Attackers capturing sensitive email communications. |
+  | **T1056** | Input Capture | Credential theft via keyloggers or form grabbers. |
+  | **T1204** | User Execution | Trick users into executing malicious attachments/links. |
+  | **T1071** | Application Layer Protocol | C2 over email protocols (IMAP/SMTP). |
+  | **T1098** | Account Manipulation | Threat actors modifying mailbox rules or MFA settings. |
+  | **T1557** | Man-in-the-Middle | Intercepting email traffic to alter communications. |
+  | **T1564** | Hide Artifacts | Hiding email forwarding rules or alerts from detection. |
+  | **T1021** | Remote Services | Using compromised accounts to access internal services. |
+  | **T1484** | Group Policy Modification | Modifying security policies to maintain access. |
+- **NIST Cybersecurity Framework** [*Identify, Protect, Detect, Respond, Recover*](https://www.nist.gov/cybersecurity)
+- **FBI IC3 Guidelines** for [BEC Prevention and Response](https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise)
