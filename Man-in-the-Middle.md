@@ -80,6 +80,19 @@ Applicable to all **MITM attack scenarios**, including:
 ---
 
 ## 7. References & Resources
-- **MITRE ATT&CK Framework** (MITM Techniques: `T1557`, `T1556`, `T1565`, etc.)
 - **NIST Cybersecurity Framework** (*Identify, Protect, Detect, Respond, Recover*)
 - **OWASP Secure Communications Guidelines**
+
+### MITRE ATT&CK Framework
+
+| **Technique ID**                                                                 | **Name**                                  | **Relevance to MITM**                                                                                                                       |
+|----------------------------------------------------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| [**T1557**](https://attack.mitre.org/techniques/T1557/)                          | **Adversary-in-the-Middle**               | Core MITM technique: intercept and manipulate communications between systems or users.                                                       |
+| [T1557.001](https://attack.mitre.org/techniques/T1557/001)                      | LLMNR/NBT-NS Poisoning and Relay          | Exploits local name resolution protocols (LLMNR/NetBIOS) to intercept or relay authentication attempts.                                      |
+| [T1557.002](https://attack.mitre.org/techniques/T1557/002)                      | ARP Cache Poisoning                       | Redirects LAN traffic by injecting false ARP responses, causing victims to route traffic via the adversary’s system.                        |
+| [T1557.003](https://attack.mitre.org/techniques/T1557/003)                      | DHCP Spoofing                             | Provides malicious DHCP configuration, rerouting traffic through attacker-controlled gateways.                                               |
+| [**T1565.002**](https://attack.mitre.org/techniques/T1565/002)                  | **Transmitted Data Manipulation**         | Attackers alter data in transit (e.g., injecting malicious commands or changing payloads) to compromise integrity/confidentiality.           |
+| [**T1556**](https://attack.mitre.org/techniques/T1556/)                          | **Modify Authentication Process**         | Attackers may tamper with or bypass authentication workflows to harvest credentials or position themselves for MITM.                        |
+| [**T1090**](https://attack.mitre.org/techniques/T1090/)                          | **Proxy**                                 | Adversaries route traffic through malicious proxies or redirectors to maintain stealth or intercept communications.                          |
+| [**T1071**](https://attack.mitre.org/techniques/T1071/)                          | **Application Layer Protocol**            | Abusing (or downgrading) protocols such as HTTP/HTTPS or DNS to intercept and manipulate application-layer traffic.                          |
+
